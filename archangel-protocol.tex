@@ -71,7 +71,7 @@ Autonomous driving, and therefore self-driving cars have a growing interest arou
 
 Although it is still the future that self-driving vehicles will populate the roads, precautions have to be made already to make these systems as safe as possible. Many sensors, cameras, lidars and other systems are placed in these vehicles to prevent accidents. But these vehicles won't be the only ones on the streets. There will be other cars with drivers, motionless objects. The cars' systems are ready to detect and avoid them. But what about the pedestrians? In case of an accident, they can be in even more danger than those sitting in the car. Are the self-driving cars' systems enough to ensure their safety too?
 
-In today's society, most people have a smartphone in their pocket at all times. Based on this fact, it is possible to create some security layers in the self-driving cars' system solely for pedestrians' safety. For this, self-driving cars and smartphones need to communicate with each other.
+In today's society, most people have a smartphone in their pocket at all times. Based on this fact, it is possible to create some security layers in the self-driving cars' system solely for pedestrians' safety. For this, self-driving cars and smartphones need to communicate with each other. \cite{b1}
 
 Self-driving cars are dealing with huge amounts of data. The surrounding objects, people, the road, other cars etc. This data has to move quickly and has to reach the destination reliably.
 
@@ -87,7 +87,7 @@ Because of the limitations of the third generation (3G) cellular network, the fi
 
 \begin{enumerate}
     \item The first is low-latency C-V2X Direct Communications over the PC5 interface on the unlicensed 5.9GHz band (which is technically the same as before). This is designed for active safety messages such as immediate road hazard warnings and other short-range ‘Vehicle to vehicle’ (V2V), ‘Vehicle to infrastructure’ (V2I), and ‘Vehicle to pedestrians’ (V2P) situations.
-    \item The second mode is communications over the Uu interface on the LTE cellular network, and can handle ‘Vehicle to Network’ (V2N) use cases like infotainment and latency-tolerant safety messages concerning longer-range road hazards or traffic conditions. Because it doesn't use cellular connectivity, IEEE 802.11p can only match this mode by making ad hoc connections to roadside base stations.
+    \item The second mode is communications over the Uu interface on the LTE cellular network, and can handle ‘Vehicle to Network’ (V2N) use cases like infotainment and latency-tolerant safety messages concerning longer-range road hazards or traffic conditions. Because it doesn't use cellular connectivity, IEEE 802.11p can only match this mode by making ad hoc connections to roadside base stations. \cite{b2}
 \end{enumerate}
 
 As far as LTE goes, this technology can’t handle intense data pressure through the network thus the whole system needs the most current cellular network, which is 5G in this case.
@@ -102,12 +102,12 @@ The US has proven to be fertile ground for 802.11p-based DSRC (Dedicated Short-R
 
 China is a leading supporter of C-V2X with LTE-based solutions, even running a city-wide LTE-V2X pilot project in Wuxi. Ford has announced plans to deploy C-V2X technology in China in 2021.
 
-5G already uses beamforming, which technically the application of multiple radiating elements transmitting the same signal at an identical wavelength and phase, which combine to create a single antenna with a longer, more targeted stream which is formed by reinforcing the waves in a specific direction.
+5G already uses beamforming, which technically the application of multiple radiating elements transmitting the same signal at an identical wavelength and phase, which combine to create a single antenna with a longer, more targeted stream which is formed by reinforcing the waves in a specific direction. \cite{b3}
 
 \section{The Archangel protocol}
 Our proposal is to define a new, extremely reliable Pedestrian to Vehicle (P2V) communication protocol, called Archangel protocol, the advantages of which can be used to provide an extra layer of protection for pedestrians in the vicinity of self-driving cars.
 
-In our solution we are taking the advantage of the 5G cellular network, which has continuously increasing coverage, such as extraordinarily high bandwidth, low latency and the beamforming technology introduced with it. These are the qualities that make it possible to use the cellular network for transferring the data safely between devices involved in traffic situations. As a result of this, removing the restrictions on direct forms of communication between cars. For example, the case of a street corner with thick, signal-blocking walls.
+In our solution we are taking the advantage of the 5G cellular network \cite{b4,b5}, which has continuously increasing coverage, such as extraordinarily high bandwidth, low latency and the beamforming technology introduced with it. These are the qualities that make it possible to use the cellular network for transferring the data safely between devices involved in traffic situations. As a result of this, removing the restrictions on direct forms of communication between cars. For example, the case of a street corner with thick, signal-blocking walls.
 
 \begin{figure}[h]
     \centering
@@ -227,35 +227,12 @@ an ``e'' after the ``g''. Avoid the stilted expression ``one of us (R. B.
 G.) thanks $\ldots$''. Instead, try ``R. B. G. thanks$\ldots$''. Put sponsor
 acknowledgments in the unnumbered footnote on the first page.
 
-\section*{References}
-
-Please number citations consecutively within brackets \cite{b1}. The
-sentence punctuation follows the bracket \cite{b2}. Refer simply to the reference
-number, as in \cite{b3}---do not use ``Ref. \cite{b3}'' or ``reference \cite{b3}'' except at
-the beginning of a sentence: ``Reference \cite{b3} was the first $\ldots$''
-
-Number footnotes separately in superscripts. Place the actual footnote at
-the bottom of the column in which it was cited. Do not put footnotes in the
-abstract or reference list. Use letters for table footnotes.
-
-Unless there are six authors or more give all authors' names; do not use
-``et al.''. Papers that have not been published, even if they have been
-submitted for publication, should be cited as ``unpublished'' \cite{b4}. Papers
-that have been accepted for publication should be cited as ``in press'' \cite{b5}.
-Capitalize only the first word in a paper title, except for proper nouns and
-element symbols.
-
-For papers published in translation journals, please give the English
-citation first, followed by the original foreign-language citation \cite{b6}.
-
 \begin{thebibliography}{00}
-    \bibitem{b1} G. Eason, B. Noble, and I. N. Sneddon, ``On certain integrals of Lipschitz-Hankel type involving products of Bessel functions,'' Phil. Trans. Roy. Soc. London, vol. A247, pp. 529--551, April 1955.
-    \bibitem{b2} J. Clerk Maxwell, A Treatise on Electricity and Magnetism, 3rd ed., vol. 2. Oxford: Clarendon, 1892, pp.68--73.
-    \bibitem{b3} I. S. Jacobs and C. P. Bean, ``Fine particles, thin films and exchange anisotropy,'' in Magnetism, vol. III, G. T. Rado and H. Suhl, Eds. New York: Academic, 1963, pp. 271--350.
-    \bibitem{b4} K. Elissa, ``Title of paper if known,'' unpublished.
-    \bibitem{b5} R. Nicole, ``Title of paper with only first word capitalized,'' J. Name Stand. Abbrev., in press.
-    \bibitem{b6} Y. Yorozu, M. Hirano, K. Oka, and Y. Tagawa, ``Electron spectroscopy studies on magneto-optical media and plastic substrate interface,'' IEEE Transl. J. Magn. Japan, vol. 2, pp. 740--741, August 1987 [Digests 9th Annual Conf. Magnetics Japan, p. 301, 1982].
-    \bibitem{b7} M. Young, The Technical Writer's Handbook. Mill Valley, CA: University Science, 1989.
+    \bibitem{b1} I. Vourgidis, L. Maglaras, A. S. Alfakeeh, A. H. Al-Bayatti, M. A. Ferrag ``Use Of Smartphones for Ensuring Vulnerable Road User Safety through Path Prediction and Early Warning: An In-Depth Review of Capabilities, Limitations and Their Applications in Cooperative Intelligent Transport Systems'' Sensors 2020, 20(4), 997 - February, 2020.
+    \bibitem{b2} Charles McLellan, ``What is V2X communication? Creating connectivity for the autonomous car era'' Topic: Autonomous Vehicles and the Enterprise, Part od a ZDNet special Feature - November 2019.
+    \bibitem{b3} E. Ali, M. Ismail, R. Nordin, N. F. Abdulah, ``Beamforming techniques for massive MIMO systems in 5G: overview, classification, and trends for future research'' SpringerLink, Frontiers of Information Technology \& Electronic Engineering  (ISSN 2095-9184) - June 2017.
+    \bibitem{b4} Stephen Shankland, ``5G could make self-driving cars smarter and commutes safer'' CNET, A RED VENTURES COMPANY - Augugust 2019.
+    \bibitem{b5} Florian Sheck, Andreas Form, Axel Freyberg, ``5G: a key requirement for autonomous driving—really?'' Kearney, Communications, Media and Technology - April, 2020.
 \end{thebibliography}
 \vspace{12pt}
 
