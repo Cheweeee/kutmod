@@ -1,6 +1,13 @@
+.idea
+
 *.aux
 *.fdb_latexmk
 *.fls
 *.log
 *.synctex.gz
-.idea
+
+*.nav
+*.out
+*.snm
+*.toc
+*.vrb
