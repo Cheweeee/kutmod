@@ -8,6 +8,7 @@
 \usepackage{textcomp}
 \usepackage{xcolor}
 \usepackage{background}
+%\usepackage{tabularx}
 
 \backgroundsetup{contents=FAKE}
 
@@ -83,16 +84,16 @@ We used this possibility with the Archangel protocol, that's why it is faster an
 Self-driving cars that are using this protocol can transfer/receive data faster and more reliably to/from other cars or pedestrians' phones. This means that these cars have more information about their surroundings so they can operate safer.
 
 \section{State of the art}
-Because of the limitations of the third generation (3G) cellular network, the first self-driving cars couldn’t use it to achieve the ‘Vehicle to everything’ (V2X) communication so the initial implementation used IEEE 802.11p  which is a standard based on Wi-Fi technology. The IEEE's WAVE, or Wireless Access for Vehicular Environments program has been running in the unlicensed 5.9GHz frequency band and provided short-range (under 1km), low latency ($ \sim $2ms) and high reliability according to the US Department of Transportation. This was able to work in high vehicle speed mobility conditions and delivers performance immune to extreme weather conditions (e.g. rain, fog, snow etc.). The only problem was it couldn’t handle longer distances that cellular networks can provide. The introduction of the Long-Term Evolution (LTE) fourth-generation (4G) wireless standard, which increased network capacity and speed, has provided an excellent foundation for the ‘Cellular vehicle to everything’ (C-V2X) communication method. Its key advantage is that it has two operational modes.
+Because of the limitations of the third generation (3G) cellular network, the first self-driving cars couldn’t use it to achieve the ‘Vehicle to everything’ (V2X) communication so the initial implementation used IEEE 802.11p  which is a standard based on Wi-Fi technology. The IEEE's WAVE, or Wireless Access for Vehicular Environments program has been running in the unlicensed 5.9GHz frequency band and provided short-range (under 1km), low latency ($ \sim $2ms) and high reliability according to the US Department of Transportation. This was able to work in high vehicle speed mobility conditions and delivers performance immune to extreme weather conditions (e.g. rain, fog, snow etc.). A main problem was it couldn’t handle longer distances that cellular networks can provide. The introduction of the Long-Term Evolution (LTE) fourth-generation (4G) wireless standard, which increased network capacity and speed, has provided an excellent foundation for the ‘Cellular vehicle to everything’ (C-V2X) communication method. Its key advantage is that it has two operational modes.
 
 \begin{enumerate}
-    \item The first is low-latency C-V2X Direct Communications over the PC5 interface on the unlicensed 5.9GHz band (which is technically the same as before). This is designed for active safety messages such as immediate road hazard warnings and other short-range ‘Vehicle to vehicle’ (V2V), ‘Vehicle to infrastructure’ (V2I), and ‘Vehicle to pedestrians’ (V2P) situations.
-    \item The second mode is communications over the Uu interface on the LTE cellular network, and can handle ‘Vehicle to Network’ (V2N) use cases like infotainment and latency-tolerant safety messages concerning longer-range road hazards or traffic conditions. Because it doesn't use cellular connectivity, IEEE 802.11p can only match this mode by making ad hoc connections to roadside base stations. \cite{b2}
+    \item The first is low-latency C-V2X Direct Communications over the PC5 interface on the unlicensed 5.9GHz band (which is technically the same as before). This is designed for active safety messages such as immediate road hazard warnings and other short-range ‘Vehicle to vehicle’ (V2V), ‘Vehicle to infrastructure’ (V2I), and ‘Vehicle to pedestrians’ (V2P) situations. \medskip
+    \item The second mode is communications over the Uu interface on the LTE cellular network, and can handle ‘Vehicle to Network’ (V2N) use cases like infotainment and latency-tolerant safety messages concerning longer-range road hazards or traffic conditions. Because it doesn't use cellular connectivity, IEEE 802.11p can only match this mode by making ad hoc connections to roadside base stations. Since an indirect connection is established between devices in this operational mode, it can also eliminate the issue of direct signal blocking objects e.g.: thick walls at street corners. \cite{b2} \smallskip
 \end{enumerate}
 
 As far as LTE goes, this technology can’t handle intense data pressure through the network thus the whole system needs the most current cellular network, which is 5G in this case.
 
-IEEE 802.11p has the advantage of earlier development and deployment. On the other, hand C-V2X offers arguably better performance as well as safer assisted and autonomous driving.
+IEEE 802.11p has the advantage of earlier development and deployment. On the other, hand C-V2X offers unarguably better performance as well as safer assisted and autonomous driving.
 
 Although the standards debate is in full flow around the world, testing and even product implementation is now underway in some regions.
 
@@ -102,6 +103,41 @@ The US has proven to be fertile ground for 802.11p-based DSRC (Dedicated Short-R
 
 China is a leading supporter of C-V2X with LTE-based solutions, even running a city-wide LTE-V2X pilot project in Wuxi. Ford has announced plans to deploy C-V2X technology in China in 2021.
 
+As we can see in a research published by MDPI Open Access Journals in February 2020, there have been attempts to predict pedestrians' moving path with neural networks, based on pedestrian positioning information recorded by smartphone devices. \cite{b1,b6} One of the first systems with prediction capability used techniques like Forward-Backward Matching (clustering algorithm) and a decision tree algorithm for the prediction part. The experimental results showed that this approach achieved around 80\% and
+60\% accuracy in destination prediction and 1-step prediction, respectively, and resulted in an average deviation of approximately 60 m in continuous future route prediction. There were attempts predict with applying a mixed Markov–Chain Model (MMM) and by comparing the results against a Hidden Markon Model(HMM) and a Markov Model. The authors of former researches pointed out that predictions must happen within very short period of time such as $>$0.5 s and $<$2 s. Their results produced an
+F-14 score of 97\% and an average delay of 783 ms. During this time, in case of an emergency situation we lose valuable meters, see the table below.
+\begin{table}[h]
+\begin{center}
+    \begin{tabular}{ |c|c|c| } 
+     \hline
+     speed($\frac{km}{h}$) & speed($\frac{m}{s}$) & distance(m) \\
+     \hline 
+     30 & 8,3 & 6,5 \\ 
+     \hline
+     50 & 13,8 & 10,8 \\ 
+     \hline
+     70 & 19,4 & 15,2 \\ 
+     \hline
+     90 & 25 & 19,6 \\
+     \hline 
+    \end{tabular}
+\end{center}
+\caption{Distance traveled during delay time}
+\end{table}
+
+% \begin{tabularx}{0.8\textwidth} { 
+%     | >{\raggedright\arraybackslash}X 
+%     | >{\centering\arraybackslash}X 
+%     | >{\raggedleft\arraybackslash}X | }
+%    \hline
+%    item 11 & item 12 & item 13 \\
+%    \hline
+%    item 21  & item 22  & item 23  \\
+%   \hline
+% \end{tabularx}
+
+These methods have not yet taken advantage of 5G. Our goal is to reduce the latency due to data movement and calculations as much as possible.
+
 5G already uses beamforming, which technically the application of multiple radiating elements transmitting the same signal at an identical wavelength and phase, which combine to create a single antenna with a longer, more targeted stream which is formed by reinforcing the waves in a specific direction. \cite{b3}
 
 \section{The Archangel protocol}
@@ -109,7 +145,7 @@ Our proposal is to define a new, extremely reliable Pedestrian to Vehicle (P2V) 
 
 In our solution we are taking the advantage of the 5G cellular network \cite{b4,b5}, which has continuously increasing coverage, such as extraordinarily high bandwidth, low latency and the beamforming technology introduced with it. These are the qualities that make it possible to use the cellular network for transferring the data safely between devices involved in traffic situations. As a result of this, removing the restrictions on direct forms of communication between cars. For example, the case of a street corner with thick, signal-blocking walls.
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=8.5cm]{./pics/Corner.png}
     \caption{Direct signaling blocked by a building}
@@ -121,15 +157,13 @@ Thereby the driver and also the car itself can be notified in time of pedestrian
 
 Important to highlight the main prerequisite for the operation of our system: the devices of the parties involved in traffic situations (self-driving car, mobile phone) must be 5G capable devices that support the Archangel protocol.
 
-Technical details:
-
-The essence of the system is that cars and pedestrians constantly share data about their position and state of motion. These data run into so-called computational units located in the middle of the zones defined by a finite number of 5G towers, which are able to predict routes and possible collision points from the data sent by the nodes (mobile phone, car). The system is capable to rank the computed information, thus prioritizing the potential collisions. Exceeding a dynamic threshold set by the system, the car is notified that a pedestrian is nearby and a potential collision is preventable.
+Technical details: The essence of the system is that cars and pedestrians constantly share data about their position and state of motion. These data run into so-called computational units located in the middle of the zones defined by a finite number of 5G towers, which are able to predict routes and possible collision points from the data sent by the nodes (mobile phone, car). The system is capable to rank the computed information, thus prioritizing the potential collisions. Exceeding a dynamic threshold set by the system, the car is notified that a pedestrian is nearby and a potential collision is preventable.
 
 The need of computational units is confirmed by the fact that endpoints (pedestrians and cars) alone do not have sufficient resources to process such a large amount of data. Respectively, due to the limited range of direct communication, no information would be available about points outside the communication distance of each node. We also need to take into account the case where many people or cars gather at a given point. In this case, communication between endpoints is extremely cumbersome. To remedy these problems, we introduce a centralized point into the system that has high computing capacity and is able to provide all important computations within critical time constraints with high precision, which could be considered as one source of truth in the system. The problem of many devices in a small space is eliminated by the use of network communication, including beamforming technology.
 
 Most of the communication works through 5G, in practice, the nodes send the data to the 5G towers and the towers to the local computational unit. The most important is the area described by a given computational unit, since within this area it provides the cars with the exact already ranked notifications calculated from the processed data and thus the cars are ultimately informed of the potential danger.
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=8.5cm]{./pics/Communication.png}
     \caption{Communication inside zones}
@@ -137,7 +171,7 @@ Most of the communication works through 5G, in practice, the nodes send the data
 
 However, it is important to look at edge cases. For example what happens when a pedestrian and a car falls into a separate computational zone, even though they are close to each other. As long as the pedestrian and car computational units are able to calculate the predicted speed and direction of both separately, it is not clear whether the two objects would not cross each other, causing a potential collision. In this case, the neighboring computational units share data on the status of the pedestrian and the car. In such cases, it is obvious that the car’s computational unit needs to know the pedestrian’s data out of the other zone, as it transmits this data to the car, whether the pedestrian is now dangerously close to the car or not.
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=8.5cm]{./pics/Edge case.png}
     \caption{Edge case}
@@ -161,7 +195,7 @@ Then from the speed and the direction, a movement vector is defined for each par
 
 If the participants' line of movement intersects with one another, then their possible meeting point is determined based on the movement vectors. The meeting point is the point in space, where - given their current speed and direction - the car and the pedestrian will reach at the same time. The time (in which they will reach that point) is taken in seconds and its multiplicative inverse is added to the score. If they will not meet, nothing is added to the score.
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=8.5cm]{./pics/Core factors of the calculation.png}
     \caption{Core factors of the calculation}
@@ -211,7 +245,7 @@ The compressed data type is the other option. Here a fast compression is necessa
 
 Deciding which type is used in which scenario would be handled by an algorithm that would analyze whether the code or the compression is better. If we want to send lots of data compression is chosen while in some cases it would be a waste of resources, there the code type should be chosen. The result of this decision is the number of the datatype at the beginning of the package (after UUID and serial number).
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=8.5cm]{./pics/Package structure.png}
     \caption{Package structure}
@@ -221,11 +255,12 @@ Deciding which type is used in which scenario would be handled by an algorithm t
 Even though self-driving cars don't have a long history, this branch of technology is certainly important and is far from its final form. There are still lots of problems waiting to be solved because self-driving cars are an inevitable part of the future. In our work, we managed to specify a new communication protocol which does pioneer work in protection of pedestrians. We think our work is worth the effort since traffic safety is one of the most important problems but now it is one step closer to be solved.
 
 \begin{thebibliography}{00}
-    \bibitem{b1} I. Vourgidis, L. Maglaras, A. S. Alfakeeh, A. H. Al-Bayatti, M. A. Ferrag ``Use Of Smartphones for Ensuring Vulnerable Road User Safety through Path Prediction and Early Warning: An In-Depth Review of Capabilities, Limitations and Their Applications in Cooperative Intelligent Transport Systems'' Sensors 2020, 20(4), 997 - February, 2020.
+    \bibitem{b1} I. Vourgidis, L. Maglaras, A. S. Alfakeeh, A. H. Al-Bayatti, M. A. Ferrag ``Use Of Smartphones for Ensuring Vulnerable Road User Safety through Path Prediction and Early Warning: An In-Depth Review of Capabilities, Limitations and Their Applications in Cooperative Intelligent Transport Systems'' MDPI Open Access Journals 2020, 20(4), 997 - February, 2020.
     \bibitem{b2} Charles McLellan, ``What is V2X communication? Creating connectivity for the autonomous car era'' Topic: Autonomous Vehicles and the Enterprise, Part od a ZDNet special Feature - November 2019.
     \bibitem{b3} E. Ali, M. Ismail, R. Nordin, N. F. Abdulah, ``Beamforming techniques for massive MIMO systems in 5G: overview, classification, and trends for future research'' SpringerLink, Frontiers of Information Technology \& Electronic Engineering  (ISSN 2095-9184) - June 2017.
     \bibitem{b4} Stephen Shankland, ``5G could make self-driving cars smarter and commutes safer'' CNET, A RED VENTURES COMPANY - Augugust 2019.
     \bibitem{b5} Florian Sheck, Andreas Form, Axel Freyberg, ``5G: a key requirement for autonomous driving—really?'' Kearney, Communications, Media and Technology - April, 2020.
+    \bibitem{b6} Murphey, Y.L.; Liu, C.; Tayyab, M.; Narayan, D. Accurate pedestrian path prediction using neural networks. In Proceedings of the 2017 IEEE Symposium Series on Computational Intelligence (SSCI 2017), Honolulu, HI, USA, 27 November–1 December 2017; pp. 1–7.
 \end{thebibliography}
 \vspace{12pt}
 
