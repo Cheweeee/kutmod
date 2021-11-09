@@ -336,9 +336,23 @@ Eötvös Loránd University \\ % Your institution for the title page
 
 \begin{frame}
     \frametitle{Package structure}
-    \begin{theorem}[Mass--energy equivalence]
-        $E = mc^2$
-    \end{theorem}
+    \begin{textblock*}{5cm}(2cm, 3.3cm) % {block width} (coords)
+        \includegraphics[width=8cm]{pics/Package structure.png}
+    \end{textblock*}
+    \begin{itemize}
+        \item UUID
+            \begin{itemize}
+                \item Number of UUIDs
+                \item For example:  123e4567-e89b-12d3-a456-426614174000
+            \end{itemize}
+        \item Serial number
+        \item Data type code
+        \item Actual data
+            \begin{itemize}
+                \item Coded
+                \item Compressed
+            \end{itemize}
+    \end{itemize}
 \end{frame}
 
 %------------------------------------------------
