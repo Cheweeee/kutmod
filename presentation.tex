@@ -78,7 +78,7 @@
 
 \usepackage{graphicx} % Allows including images
 \usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
-\usepackage{wrapfig}
+\usepackage{textpos}
 
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
@@ -116,12 +116,19 @@ Eötvös Loránd University \\ % Your institution for the title page
 
 \begin{frame}
     \frametitle{Introduction}
+    \begin{textblock*}{5cm}(6cm, 2.7cm) % {block width} (coords)
+        \includegraphics[width=5cm]{pics/Woman reading.png}
+    \end{textblock*}
     \begin{itemize}
-        \item Autonomous driving have a growing interest
-        \item Pedestrians are the potential victims
+        \item Autonomous driving has a growing interest
               \begin{itemize}
                   \item More self-driving cars
                   \item Less human control
+              \end{itemize}
+        \item Pedestrians are the potential victims
+              \begin{itemize}
+                  \item Exposed to traffic dangers
+                  \item No protection
               \end{itemize}
         \item Smartphones
               \begin{itemize}
@@ -129,13 +136,10 @@ Eötvös Loránd University \\ % Your institution for the title page
                   \item Increase safety
               \end{itemize}
         \item Huge amount of data
-        \item 5G more capable cellular network
+              \begin{itemize}
+                  \item 5G networks
+              \end{itemize}
     \end{itemize}
-
-    % \begin{wrapfigure}{r}{0.45\textwidth}
-    %     \includegraphics[width=\linewidth]{woman-read.png}
-    % \end{wrapfigure}
-
 \end{frame}
 
 %------------------------------------------------
