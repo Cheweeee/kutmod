@@ -146,7 +146,15 @@ Important to highlight the main prerequisite for the operation of our system: th
 
 Technical details: The essence of the system is that cars and pedestrians constantly share data about their position and state of motion. These data run into so-called computational units located in the middle of the zones defined by a finite number of 5G towers, which are able to predict routes and possible collision points from the data sent by the nodes (mobile phone, car). The system is capable to rank the computed information, thus prioritizing the potential collisions. Exceeding a dynamic threshold set by the system, the car is notified that a pedestrian is nearby and a potential collision is preventable.
 
-The need of computational units is confirmed by the fact that endpoints (pedestrians and cars) alone do not have sufficient resources to process such a large amount of data. Respectively, due to the limited range of direct communication, no information would be available about points outside the communication distance of each node. We also need to take into account the case where many people or cars gather at a given point. In this case, communication between endpoints is extremely cumbersome. To remedy these problems, we introduce a centralized point into the system that has high computing capacity and is able to provide all important computations within critical time constraints with high precision, which could be considered as one source of truth in the system. The problem of many devices in a small space is eliminated by the use of network communication, including beamforming technology.
+The need of computational units is confirmed by the fact that endpoints (pedestrians and cars) alone do not have sufficient resources to process such a large amount of data.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=4.5cm]{./pics/Range of direct communication.png}
+    \caption{Limited range of direct communication}
+\end{figure}
+
+Respectively, due to the limited range of direct communication, no information would be available about points outside the communication distance of each node. We also need to take into account the case where many people or cars gather at a given point. In this case, communication between endpoints is extremely cumbersome. To remedy these problems, we introduce a centralized point into the system that has high computing capacity and is able to provide all important computations within critical time constraints with high precision, which could be considered as one source of truth in the system. The problem of many devices in a small space is eliminated by the use of network communication, including beamforming technology.
 
 Most of the communication works through 5G, in practice, the nodes send the data to the 5G towers and the towers to the local computational unit. The most important is the area described by a given computational unit, since within this area it provides the cars with the exact already ranked notifications calculated from the processed data and thus the cars are ultimately informed of the potential danger.
 
