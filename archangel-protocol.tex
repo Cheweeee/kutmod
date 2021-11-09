@@ -14,7 +14,7 @@
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
 
-\title{Archangel protocol for pedestrian to vehicle communication via 5G networks\\}
+\title{Archangel Protocol for Pedestrian to Vehicle Communication via 5G Networks\\}
 
 \makeatletter
 \newcommand{\linebreakand}{
@@ -74,7 +74,7 @@ In today's society, most people have a smartphone in their pocket at all times. 
 
 Self-driving cars are dealing with huge amounts of data. The surrounding objects, people, the road, other cars etc. This data has to move quickly and has to reach the destination reliably.
 
-Currently the protocols are for the 4G networks which are way slower than the upcoming 5G. It could become insufficient in the near future. That's why it is mandatory to make new protocols for the 5G networks.
+Currently the protocols are for the 4G networks which are way slower than the upcoming 5G. It could become insufficient in the near future. That's why it is essential to make new protocols for the 5G networks.
 
 5G uses beamforming which means it's not spreading the data everywhere, but concentrates it to the destinations. The problem with spreading the data is that the strength of the signal decreases cubically. With 5G delivering up to 20 Gigabits of data per second became possible.
 We used this possibility with the Archangel protocol, that's why it is faster and more reliable than the old ones.
@@ -91,7 +91,7 @@ Because of the limitations of the third generation (3G) cellular network, the fi
 
 As far as LTE goes, this technology can’t handle intense data pressure through the network thus the whole system needs the most current cellular network, which is 5G in this case.
 
-IEEE 802.11p has the advantage of earlier development and deployment. On the other, hand C-V2X offers unarguably better performance as well as safer assisted and autonomous driving.
+IEEE 802.11p has the advantage of earlier development and deployment. On the other hand C-V2X offers unarguably better performance as well as safer assisted and autonomous driving.
 
 Although the standards debate is in full flow around the world, testing and even product implementation is now underway in some regions.
 
@@ -130,7 +130,7 @@ These methods have not yet taken advantage of 5G. Our goal is to reduce the late
 \section{The Archangel protocol}
 Our proposal is to define a new, extremely reliable Pedestrian to Vehicle (P2V) communication protocol, called Archangel protocol, the advantages of which can be used to provide an extra layer of protection for pedestrians in the vicinity of self-driving cars.
 
-In our solution we are taking the advantage of the 5G cellular network \cite{b4,b5}, which has continuously increasing coverage, such as extraordinarily high bandwidth, low latency and the beamforming technology introduced with it. These are the qualities that make it possible to use the cellular network for transferring the data safely between devices involved in traffic situations. As a result of this, removing the restrictions on direct forms of communication between cars. For example, the case of a street corner with thick, signal-blocking walls.
+In our solution we are taking advantage of the 5G cellular network \cite{b4,b5}, which has continuously increasing coverage, such as extraordinarily high bandwidth, low latency and the beamforming technology introduced with it. These are the qualities that make it possible to use the cellular network for transferring the data safely between devices involved in traffic situations. As a result of this, removing the restrictions on direct forms of communication between cars. For example, the case of a street corner with thick, signal-blocking walls.
 
 \begin{figure}[ht]
     \centering
@@ -176,19 +176,19 @@ However, the question remains that which of the two computational units should c
 
 \section{Scoring system}
 
-Some data is prioritized over others when sent out from the computational units. Therefore, a scoring system is introduced. Every message has a score that represents its urgency - the higher the score, the sooner the message must be sent out. The purpose of this protocol is to make the pedestrians’ life even safer next to self-driving cars. Because of this, the messages concerning pedestrians who are potentially in the most danger need to be prioritized.
+Some data is prioritized over others when sent out from the computational units. Therefore, a scoring system is introduced. Every message has a score that represents its urgency -- the higher the score, the sooner the message must be sent out. The purpose of this protocol is to make the pedestrians’ life even safer next to self--driving cars. Because of this, the messages concerning pedestrians who are potentially in the most danger need to be prioritized.
 
 Every message gets a score that describes the hazard factor of the situation. Each situation is composed of two elements: the self-driving car's movements and the pedestrian's movements. From these, the computational units calculate the points that determine the order.
 
 A self-driving car and a pedestrian (objects of movement) need to provide the same type of data for these calculations.
 
-The three main aspects that are taken into consideration: the speed and the direction of the movement combined with the objects’ current position. These are core factors - without them computations are not possible.
+The three main aspects that are taken into consideration are the speed and the direction of the movement combined with the objects’ current position. These are core factors -- without them computations are not possible.
 
-The car's and the pedestrian's positions determine their distance from each other as the crow flies. If they are closer to each other, then a change in their course could highly increase the chance of an accident. Firstly, the score is the multiplicative inverse of the calculated distance in meters.
+The car's and the pedestrian's positions determine their distance from each other as the crow flies. If they are relatively close to each other, then a change in their course could highly increase the chance of an accident. So firstly, the score is the multiplicative inverse of the calculated distance in meters.
 
-Then from the speed and the direction, a movement vector is defined for each participant. If they are moving away from each other, the score is multiplied by (-1), so it will be the additive inverse of the original score.
+Then from their speed and their movement's direction, a movement vector is defined for each participant. If they are moving away from each other, the score is multiplied by (-1), so it will be the additive inverse of the original score.
 
-If the participants' line of movement intersects with one another, then their possible meeting point is determined based on the movement vectors. The meeting point is the point in space, where - given their current speed and direction - the car and the pedestrian will reach at the same time. The time (in which they will reach that point) is taken in seconds and its multiplicative inverse is added to the score. If they will not meet, nothing is added to the score.
+If the participants' line of movement intersects with one another, then their possible meeting point is determined based on the movement vectors. The meeting point is the point in space, where -- given their current speed and direction -- the car and the pedestrian will reach at the same time. The time (in which they will reach that point) is taken in seconds and its multiplicative inverse is added to the score. If they will not meet, nothing is added to the score.
 
 \begin{figure}[ht]
     \centering
@@ -196,17 +196,17 @@ If the participants' line of movement intersects with one another, then their po
     \caption{Core factors of the calculation}
 \end{figure}
 
-Then the environment is taken into consideration too - if there is data available. For example, if the person is in a building, then the chance of an accident is very low, but if they are on the sidewalk or walking on the road, the danger might be much higher, which the previous calculations don't show.
+Then the environment is taken into consideration too -- if there is data available. For example, if the person is in a building, then the chance of an accident is very low, but if they are on the sidewalk or walking on the road, the danger might be much higher, which the previous calculations don't show.
 
 If there are no objects between the car and the pedestrian, then the score is multiplied by 1.5, if the pedestrian is walking on the road (instead of the sidewalk), the score is multiplied by 2. These calculations indicate the greater risk.
 
-For every obstacle in the way of the car - which would most probably stop it before an accident could happen, therefore the walking person is safer - the score is multiplied by 0.9. These obstacles could be traffic lights, road closures, or even police officers who are conducting the traffic.
+For every obstacle in the way of the car -- which would most probably stop it before an accident could happen, therefore the vulnerable road user is safer -- the score is multiplied by 0.9. These obstacles could be traffic lights, road closures, or even police officers who are conducting the traffic.
 
 If the person’s position is inside of a building, the score is multiplied by 0.7. The position might be inaccurate thus it is not sure that the person actually is in the building. Because of that, it is not entirely safe to drop the message in this case, but its importance may be lower.
 
-The last part of the score calculation is to assess the possibility of the routes. For example, if some information is available about the pedestrian's or the car's usual movements, it can be used to raise the scores. If a person takes the same route almost every day (for example going home from work), they likely are going the same way. If the meeting point is on a frequently taken route, then the score is multiplied by 1.5.
+The last and biggest part of the score calculation is to assess the possibility of certain routes and to predict movements. For instance, if some information is available about the pedestrian's or the car's usual movements, it can be used to raise the scores. If a person takes the same route almost every day (e.g. going home from work), they likely are going the same way again. If the meeting point is on a frequently taken route or there's a great chance that the car and the pedestrian will meet based on the movement predictions, then the score is multiplied by 1.5.
 
-If a score is negative, the danger for the pedestrian - in that given situation - is minimal. That means that the message can be safely dropped. Since the probability of an accident in that specific situation is very low, it is not necessary to send out this particular message, because it would only generate surplus data traffic.
+If the final score is negative, the danger for the vulnerable road user -- in that given situation -- is minimal. That means that the message can be safely dropped. Since the probability of an accident in that specific situation is very low, it is not necessary to send out this particular notification, because it would only generate surplus data traffic.
 
 \section{Package structure}
 
