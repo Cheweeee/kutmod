@@ -143,18 +143,64 @@ Eötvös Loránd University \\ % Your institution for the title page
 \end{frame}
 
 %------------------------------------------------
-\section{State of the Art}
+\section{State of the art}
 %------------------------------------------------
 
 \begin{frame}
-    \frametitle{State of the art}
+    \frametitle{State of the art -- Communication}
     \begin{itemize}
-        \item Lorem ipsum dolor sit amet, consectetur adipiscing elit
-        \item Aliquam blandit faucibus nisi, sit amet dapibus enim tempus eu
-        \item Nulla commodo, erat quis gravida posuere, elit lacus lobortis est, quis porttitor odio mauris at libero
-        \item Nam cursus est eget velit posuere pellentesque
-        \item Vestibulum faucibus velit a augue condimentum quis convallis nulla gravida
+        \item V2X -- Vehicle to everything
+            \begin{itemize}
+                \item Direct communication within short distances ($\sim$1km)
+                \item WiFi technology in the licenced 5,9 GHz bandwidth
+            \end{itemize}
+        \item C-V2X -- Cellular vehicle to everything
+            \begin{itemize}
+                \item Prerequisite: Long-Term Evolution (LTE)
+                \item Two operational modes:
+                    \begin{itemize}
+                        \item Direct communication over PC5 interface
+                        \item Indirect communication over Uu-interface
+                    \end{itemize}
+                \item Long distance, latency-tolerant warnings
+                \item Problem: LTE not fast enough for life-critical systems
+            \end{itemize}
+        \item C-V2X over 5G mobile-network
+            \begin{itemize}
+                \item Designed to deliver peak data rates up to 20 Gbps
+                \item Beamforming technology
+            \end{itemize}
     \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{State of the art -- Prediction \& Scoring}
+    \begin{itemize}
+        \item There were several attempts in this area
+            \begin{itemize}
+                \item neural networks, decision trees and clustering algorithms
+                \item Prediction time concidered to be optimal: $>$0,5s and $<$2s  
+            \end{itemize}
+        \item Most accurate former attempt
+            \begin{itemize}
+                \item Based on Mixed Markov-Chain Model (MMM)
+                \item Accuracy score: 97\% with average delay of 783 ms
+                \item With a new protocol via 5G this time can be reduced
+            \end{itemize}
+    \end{itemize}
+    \begin{table}
+        \begin{tabular}{l l l}
+            \toprule
+            \textbf{speed($\frac{km}{h}$)} & \textbf{speed($\frac{m}{s}$)} & \textbf{distance(m)} \\
+            \midrule
+                \;\;\;\;30         & \;\;\;8,3           & \;\;\;\;6,5             \\
+                \;\;\;\;50         & \;\;13,8            & \;\;\;10,8              \\
+                \;\;\;\;70         & \;\;19,4            & \;\;\;15,2              \\
+                \;\;\;\;90         & \;\;\;25            & \;\;\;19,6              \\
+            \bottomrule
+        \end{tabular}
+        \caption{Distance traveled during delay time}
+    \end{table}
 \end{frame}
 
 %------------------------------------------------
@@ -162,18 +208,23 @@ Eötvös Loránd University \\ % Your institution for the title page
 %------------------------------------------------
 
 \begin{frame}
-    \frametitle{The Archangel protocol}
-    \begin{block}{Block 1}
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue. Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan dolor.
-    \end{block}
-
-    \begin{block}{Block 2}
-        Pellentesque sed tellus purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum quis magna at risus dictum tempor eu vitae velit.
-    \end{block}
-
-    \begin{block}{Block 3}
-        Suspendisse tincidunt sagittis gravida. Curabitur condimentum, enim sed venenatis rutrum, ipsum neque consectetur orci, sed blandit justo nisi ac lacus.
-    \end{block}
+    \frametitle{The Archangel protocol -- Intro}
+    \begin{itemize}
+        \item P2V -- Pedestrian to Vehicle
+        \item Prerequisites:
+            \begin{itemize}
+                \item 5G coverage
+                \item Smartphone with 5G and Archangel-protocol capability
+            \end{itemize}
+        \item High reliability and fault tolerance
+        \item Prediction, Scoring system, Warning messages
+        \item Handles the case of street corners with thick walls 
+    \end{itemize}
+    \begin{figure}[h]
+        \centerline{\includegraphics[width=4cm]{./pics/Corner.png}}
+        \caption{Direct signaling blocked by a building}
+        \label{fig}
+        \end{figure}
 \end{frame}
 
 %------------------------------------------------

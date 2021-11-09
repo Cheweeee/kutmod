@@ -1,0 +1,37 @@
+Presentation: Archangel protocol
+
+State of the art
+
+Frame1:
+The original V2X communication is based on the IEEE 802.11p standard which is part of the IEEE's
+WAVE, Wireless Access for Vehicular Environments program. It uses WiFi technology in order to send
+and receive messages such as collision warnings or speed limit alerts within a relatively short distance.
+
+The introduction of fourth generation mobile networks has made it possible to transfer latency-tolerant
+data like longer-range road hazards or some information about expected traffic conditions. But it wasn't
+fast enough for active safety messages such as immediate road hazard warnings and other short-range V2V
+or V2P situations. This direct method aligns closely with the original V2X standard mentioned before.
+
+Apart from this, the system we design may experience such an intense data pressures that LTE technology
+cannot handle. This is where 5G comes into our scope of view. It can provide extremely high bandwidth and
+low latency. In addition to this with 5G short-range, indirect communication becomes available. Last but not least,
+don't forget about the beamforming technology, which will also be very useful in some special situations.
+
+Frame2:
+As we can see in a research published by MDPI Open Access Journals in February 2020, there have been attempts to
+predict pedestrians’ moving path with neural networks, based on pedestrian positioning information recorded and sent 
+by smartphone devices. The most accurate former attempt produced an accuracy score of 97% with avarage latency
+of 783ms. During this time, in case of an emergency situation we lose valuable meters. As we can see in the table
+it means more then 10 meters at a pace of 50 km/h, which may cost human lives in case of an accident. 
+
+Archangel protocol intro
+
+Frame3:
+Our proposal is to define a new, extremely reliable Pedestrian to Vehicle (P2V) communication protocol,
+called Archangel protocol, the advantages of which can be used to provide an extra layer of protection for 
+pedestrians in the vicinity of self-driving cars.
+Important to highlight the main prerequisites of our system: The devices of the parties
+involved in traffic situations (self-driving car, mobile phone) must be 5G capable
+devices that support the Archangel protocol. Because of in our solution we are taking all the advantages of
+the 5G cellular networks. As a result of this, removing the restrictions on direct forms of communication between cars.
+For example, the case of a street corner with thick, signal-blocking walls.
