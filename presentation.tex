@@ -78,7 +78,7 @@
 
 \usepackage{graphicx} % Allows including images
 \usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
-\usepackage{wrapfig}
+\usepackage{textpos}
 
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
@@ -116,12 +116,19 @@ Eötvös Loránd University \\ % Your institution for the title page
 
 \begin{frame}
     \frametitle{Introduction}
+    \begin{textblock*}{5cm}(6cm, 2.7cm) % {block width} (coords)
+        \includegraphics[width=5cm]{pics/Woman reading.png}
+    \end{textblock*}
     \begin{itemize}
-        \item Autonomous driving have a growing interest
-        \item Pedestrians are the potential victims
+        \item Autonomous driving has a growing interest
               \begin{itemize}
                   \item More self-driving cars
                   \item Less human control
+              \end{itemize}
+        \item Pedestrians are the potential victims
+              \begin{itemize}
+                  \item Exposed to traffic dangers
+                  \item No protection
               \end{itemize}
         \item Smartphones
               \begin{itemize}
@@ -129,13 +136,10 @@ Eötvös Loránd University \\ % Your institution for the title page
                   \item Increase safety
               \end{itemize}
         \item Huge amount of data
-        \item 5G more capable cellular network
+              \begin{itemize}
+                  \item 5G networks
+              \end{itemize}
     \end{itemize}
-
-    % \begin{wrapfigure}{r}{0.45\textwidth}
-    %     \includegraphics[width=\linewidth]{woman-read.png}
-    % \end{wrapfigure}
-
 \end{frame}
 
 %------------------------------------------------
@@ -173,25 +177,57 @@ Eötvös Loránd University \\ % Your institution for the title page
 \end{frame}
 
 %------------------------------------------------
-\subsection{Zones}
+\subsection{Computational units}
 %------------------------------------------------
 
 \begin{frame}
-    \frametitle{Zones}
-    \begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+    \frametitle{Computational units}
+    \begin{textblock*}{5cm}(6cm, 0cm) % {block width} (coords)
+        \includegraphics[width=5cm]{pics/Range of direct communication.png}
+    \end{textblock*}
+    \begin{itemize}
+        \item Endpoints cannot process \\ large amount of data
+        \item Border coverage is needed
+        \item Centralized points
+        \item High computing capacity
+        \item Computations within \\ critical time constraints
+        \item Precision
+    \end{itemize}
+\end{frame}
 
-        \column{.45\textwidth} % Left column and width
-        \textbf{Heading}
-        \begin{enumerate}
-            \item Statement
-            \item Explanation
-            \item Example
-        \end{enumerate}
+%------------------------------------------------
+\subsection{Communication}
+%------------------------------------------------
 
-        \column{.5\textwidth} % Right column and width
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue. Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan dolor.
+\begin{frame}[t]
+    \frametitle{Communication}
+    \begin{textblock*}{5cm}(2cm, 1.6cm) % {block width} (coords)
+        \includegraphics[width=8cm]{pics/Communication.png}
+    \end{textblock*}
+    \begin{itemize}
+        \item Node $\rightarrow$ 5G Tower $\rightarrow$ Computational unit
+        \item Area described by a given computational unit is a zone
+    \end{itemize}
+\end{frame}
 
-    \end{columns}
+%------------------------------------------------
+\subsection{Edge case}
+%------------------------------------------------
+
+\begin{frame}[t]
+    \frametitle{Edge case}
+    \begin{textblock*}{5cm}(2cm, 3.3cm) % {block width} (coords)
+        \includegraphics[width=8cm]{pics/Edge case.png}
+    \end{textblock*}
+    \begin{itemize}
+        \item Pedestrian and a car in a separate computational zone
+        \item The car’s computational unit needs to know the pedestrian’s data
+        \item Which of the two CUs should calculate the data for the car?
+              \begin{enumerate}
+                  \item Optimal case $\rightarrow$ The CU which is in the zone of the car
+                  \item Network round trip to save time in case when \\ the car's CU is already critically loaded
+              \end{enumerate}
+    \end{itemize}
 \end{frame}
 
 %------------------------------------------------

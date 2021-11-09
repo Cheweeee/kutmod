@@ -1,0 +1,66 @@
+---------- Computational units ----------
+
+The essence of the system is that cars and pedestrians
+constantly share data about their position and motion.
+These data run into computational units.
+
+The need of computational units is confirmed by the fact that
+endpoints (pedestrians and cars) alone do not have sufficient
+resources to process large amount of data.
+
+Border coverage is needed because endpoints have just a
+limited range of direct communication, meaning that they
+have no information about points outside the communication
+distance of each node.
+
+We introduce a centralized point into the system that has high
+computing capacity and it is able to provide all important
+computations within critical time constraints with high precision.
+
+---------- Communication ----------
+
+Most of the communication works through 5G, in practice,
+the nodes send the data to the 5G towers and the towers
+to the local computational unit.
+
+The most important is the area described by a given 
+computational unit, since within this area it provides
+the cars with the exact already ranked notifications 
+calculated from the processed data and thus the
+cars are ultimately informed of the potential danger.
+
+---------- Edge case ----------
+
+Take a look at at this edge case:
+What happens when a pedestrian and a car falls into a separate
+computational zone, even though they are close to each other?
+
+In this case,the neighboring computational units share data
+on the status of the pedestrian and the car.
+
+The car’s computational unit needs to know the pedestrian’s
+data out of the other zone, as it transmits this data to the car,
+whether the pedestrian is now dangerously close to the car or not.
+
+However, the question remains that which of the two
+computational units should calculate the data to be sent to
+the car.
+
+The optimal case would be that the computational unit which 
+is in the zone of the car does the computation, because this
+unit will notify the car end of the day.
+
+However, we should investigate the case when this unit is already
+critically loaded with computations until the pedestrian’s is fully
+capable for the work because it is less loaded.
+
+Computational units can communicate with each other and
+one computational unit knows its own loadness and even
+knows its neighboring computational units statuses, thus
+it can decide that the computing or the network round trip
+time takes more time.
+
+If the networking scenario is chosen the neighboring
+computational unit will do the calculation, thus
+balancing the load on the system and save time
+in general.
