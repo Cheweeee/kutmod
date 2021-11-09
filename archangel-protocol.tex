@@ -1,6 +1,5 @@
 \documentclass[conference]{IEEEtran}
 \IEEEoverridecommandlockouts
-% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
 \usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{algorithmic}
@@ -8,7 +7,6 @@
 \usepackage{textcomp}
 \usepackage{xcolor}
 \usepackage{background}
-%\usepackage{tabularx}
 
 \backgroundsetup{contents=FAKE}
 
@@ -107,34 +105,23 @@ As we can see in a research published by MDPI Open Access Journals in February 2
 60\% accuracy in destination prediction and 1-step prediction, respectively, and resulted in an average deviation of approximately 60 m in continuous future route prediction. There were attempts predict with applying a mixed Markov–Chain Model (MMM) and by comparing the results against a Hidden Markon Model(HMM) and a Markov Model. The authors of former researches pointed out that predictions must happen within very short period of time such as $>$0.5 s and $<$2 s. Their results produced an
 F-14 score of 97\% and an average delay of 783 ms. During this time, in case of an emergency situation we lose valuable meters, see the table below.
 \begin{table}[h]
-\begin{center}
-    \begin{tabular}{ |c|c|c| } 
-     \hline
-     speed($\frac{km}{h}$) & speed($\frac{m}{s}$) & distance(m) \\
-     \hline 
-     30 & 8,3 & 6,5 \\ 
-     \hline
-     50 & 13,8 & 10,8 \\ 
-     \hline
-     70 & 19,4 & 15,2 \\ 
-     \hline
-     90 & 25 & 19,6 \\
-     \hline 
-    \end{tabular}
-\end{center}
-\caption{Distance traveled during delay time}
+    \begin{center}
+        \begin{tabular}{ |c|c|c| }
+            \hline
+            speed($\frac{km}{h}$) & speed($\frac{m}{s}$) & distance(m) \\
+            \hline
+            30                    & 8,3                  & 6,5         \\
+            \hline
+            50                    & 13,8                 & 10,8        \\
+            \hline
+            70                    & 19,4                 & 15,2        \\
+            \hline
+            90                    & 25                   & 19,6        \\
+            \hline
+        \end{tabular}
+    \end{center}
+    \caption{Distance traveled during delay time}
 \end{table}
-
-% \begin{tabularx}{0.8\textwidth} { 
-%     | >{\raggedright\arraybackslash}X 
-%     | >{\centering\arraybackslash}X 
-%     | >{\raggedleft\arraybackslash}X | }
-%    \hline
-%    item 11 & item 12 & item 13 \\
-%    \hline
-%    item 21  & item 22  & item 23  \\
-%   \hline
-% \end{tabularx}
 
 These methods have not yet taken advantage of 5G. Our goal is to reduce the latency due to data movement and calculations as much as possible.
 
