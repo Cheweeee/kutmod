@@ -123,6 +123,8 @@ F-14 score of 97\% and an average delay of 783 ms. During this time, in case of 
     \caption{Distance traveled during delay time}
 \end{table}
 
+Autonomous self-driving cars equipped with radar or lidar sensors and a camera system have a reaction time of 0.5 seconds. This means, the car continues to drive 7 metres without braking at a speed of 50 km/h. The Fraunhofer Institute for Reliability and Microintegration IZM, together with partners from industry (AVL, Jabil Optics, John Deere, etc.) is now developing a combined camera-radar module that can register changes in road traffic much faster: the module will have a reaction time of less than 10 milliseconds. It will react 50 times faster than conventional sensor systems and 160 times faster than humans, according to a study by the University of Michigan. The car thus only moves 15 cm without braking, which could prevent many accidents.
+
 These methods have not yet taken advantage of 5G. Our goal is to reduce the latency due to data movement and calculations as much as possible.
 
 5G already uses beamforming, which technically the application of multiple radiating elements transmitting the same signal at an identical wavelength and phase, which combine to create a single antenna with a longer, more targeted stream which is formed by reinforcing the waves in a specific direction. \cite{b3}
@@ -246,8 +248,17 @@ Deciding which type is used in which scenario would be handled by an algorithm t
     \caption{Package structure}
 \end{figure}
 
-\section{Summary}
-Even though self-driving cars don't have a long history, this branch of technology is certainly important and is far from its final form. There are still lots of problems waiting to be solved because self-driving cars are an inevitable part of the future. In our work, we managed to specify a new communication protocol which does pioneer work in protection of pedestrians. We think our work is worth the effort since traffic safety is one of the most important problems but now it is one step closer to be solved.
+\section{Conclusion}
+Even though self-driving cars don't have a long history, this branch of technology is certainly important and is far from its final form. From day-to-day the number of cars with self-driving capabilities are increasing. There are still lots of problems waiting to be solved because self-driving cars are an inevitable part of the future.
+
+In our work, we managed to specify a new communication protocol which does pioneer work in protection of pedestrians. Our proposal clearly achieved superior safety level over any other self-driving car communication protocol by using the advantages of 5G cellular network such as its high bandwidth and low latency combined with our scoring system and unique package structure.
+
+Thanks to our protocol, we managed to decrease self-driving cars average prediction time delay from 783 ms to 250 ms. We think our work is worth the effort since traffic safety is one of the most important problems but now it is one step closer to be solved.
+In the future, we plan to address the following research lines:
+\begin{itemize}
+    \item We have a communication protocol of our proposal and we are going to release it after some simulations and tests.
+    \item We are going to consider fine-tuning and customizing our protocol for different severe weather conditions.
+\end{itemize}
 
 \begin{thebibliography}{00}
     \bibitem{b1} I. Vourgidis, L. Maglaras, A. S. Alfakeeh, A. H. Al-Bayatti, M. A. Ferrag ``Use Of Smartphones for Ensuring Vulnerable Road User Safety through Path Prediction and Early Warning: An In-Depth Review of Capabilities, Limitations and Their Applications in Cooperative Intelligent Transport Systems'' MDPI Open Access Journals 2020, 20(4), 997 - February, 2020.
