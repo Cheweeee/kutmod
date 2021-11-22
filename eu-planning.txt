@@ -1,9 +1,29 @@
 WP1, Project Management
 Project planning
+Description:
+Involves the setting of goals and then determining the best way to achieve them.
+Detailed review of the requirements and the financial capabilities.
+
 Resource organizing
+Description:
+Means allocating resources: people, equipment, and money to carry out the project's plans.
+Consulting between participants and determining where each subtask should be done.
+
 Workload directing
+Description:
+Is the process of providing focus for participants in the project and motivating them to achieve goals.
+Making sure that everybody do the allocated work and providing information how to move on within the project.
+
 Process controlling
+Description:
+Involves comparing actual to expected performance and taking corrective action when necessary.
+Dynamically adjusting the tasks to be sure that everything is under construction.
+Prioritizing important problems and fixing them.
+
 Verification
+Description:
+Verifying the project's goals that everything succeeded the way it was ment to be.
+Summary of the results, final evaluation.
 
 WP2, New Methods for V2X Communication
 ELTE - protocol -> package structure
