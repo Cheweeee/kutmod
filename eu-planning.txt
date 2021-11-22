@@ -1,0 +1,38 @@
+WP1, Project Management
+Project planning
+Resource organizing
+Workload directing
+Process controlling
+Verification
+
+WP2, New Methods for V2X Communication
+ELTE - protocol -> package structure
+AUDI - car communcation devices
+Telekom - 5g towers
+gogo network - computational units
+lead beneficiary: ELTE
+
+WP3, Increase Pedestrian Safety
+ELTE - scoring system
+UH - movement predictions, human behavior
+TUM - Application development for mobile devices
+lead beneficiary: ELTE
+
+WP4, Gathering and Evaluating Data in Extreme Conditions
+TUM - CU loadness balancing algorithm
+UNTIN - crowded areas
+AUDI - prepare car for extreme weather Conditions
+lead beneficiary: UNTIN
+
+WP5, System Security
+TUM - Prevent cyber attacks, security features
+TUM - AI development for live safety
+UNTIN - package loss, system recovery, system hardness
+lead beneficiary: TUM
+
+WP6, level 5 autonomous cars
+ELTE - Verification
+AUDI - car prepare, sensors
+DT - lower level logical infrastructure
+gogo network - higher lever logical infrastructure
+lead beneficiary: - AUDI
