@@ -1,0 +1,11 @@
+CIKK:
+    - references
+
+-------------------------------
+
+EU-s pályázat:
+    - full title és belőle valami okos acronym kitalálása
+    - wp-k start-, endmonth és personmonth pontos kitalálása
+        (most az egész kb. 2 év, de lehet, hogy 5-7 év kellene a feladatok összetettsége miatt)
+    - workpackage-ekbe personmonths (összesen, és lebontva a résztevőkre is)
+    - összes personmonths alapján részvevők kapott pénzösszegeinek finomhangolása
