@@ -32,11 +32,38 @@ Telekom - 5g towers
 gogo network - computational units
 lead beneficiary: ELTE
 
+-------------------------------
+
 WP3, Increase Pedestrian Safety
-ELTE - scoring system
-UH - movement predictions, human behavior
-TUM - Application development for mobile devices
-lead beneficiary: ELTE
+
+    ELTE - scoring system
+    UH - movement predictions, human behavior
+    TUM - Application development for mobile devices
+    lead beneficiary: ELTE
+
+    Total pms:
+
+    Activity type:  RTD
+    Start month:
+    End month:
+
+    Description of work:
+        The goal of this work package is to develop certain parts of the new Archangel protocol that make pedestrian life among self-driving cars safer. The lead beneficiary of this WP is ELTE.
+
+    T3.1: Movement predictions and human behavior:
+        The Archangel protocol is partly based on devices that support it. In the case of smartphones, motion data can be collected from the user. With enough data, a behavioral pattern is described. The first object of UH is to create a method that can define these behavioral patterns from the data collected.
+        After that, from the generalised movement of people and the personal behavioral patterns, the beneficiary's task is to create possible routes and movements. The result of the movement prediction will be the one (or more routes) with the highest probabilities.
+
+    T3.2: Scoring system
+        The lead beneficiary, ELTE has to work out a scoring method. It is used to calculate a score for every self-driving car-pedestrian pair that the computational unit receives. These units send out messages to the self-driving cars about pedestrians. The scoring system's goal is the create a ranking between these messages. The higher its priority, the higher score a message needs to receive. The priority is based on the situation between the car and the pedestrian, so data will be sent out about those pedestrians first who have the highest risk of having an accident with the car.
+        The scores need to be calculated based on the car's and pedestrian's movements and positions and also on the pedestrian's movements' predictions.
+
+    T3.3: Application development for mobile devices
+        The task of TUM is to create an application for the Archangel protocol's pedestrian use. Those pedestrians that want to be protected by the Archangel protocol have to download this application for their smartphones.
+        The app's job is to gather and send data through 5G towers to the appropriate computational unit. This data includes the current motions and position of the pedestrian and the results of the movement predictions. This is all the data, that the computational units need from the pedestrian for the score calculation.
+
+
+-------------------------------
 
 WP4, Gathering and Evaluating Data in Extreme Conditions
 TUM - CU loadness balancing algorithm
