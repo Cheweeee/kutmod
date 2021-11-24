@@ -26,11 +26,41 @@ Verifying the project's goals that everything succeeded the way it was ment to b
 Summary of the results, final evaluation.
 
 WP2, New Methods for V2X Communication
-ELTE - protocol -> package structure
-AUDI - car communcation devices
-Telekom - 5g towers
-gogo network - computational units
-lead beneficiary: ELTE
+
+    ELTE - protocol -> package structure
+    AUDI - car communcation devices
+    Telekom - 5G towers
+    gogo network - computational units
+    lead beneficiary: ELTE
+    
+    Total pms:
+
+    Activity type:  RTD
+    Start month:
+    End month:
+
+    Description of work:
+As more and more self-driving cars are made, new methods for their communication is required.
+It needs to be fast and reliable so 4G networks will not suffice anymore. 5G networks with beamforming technology and a higher bandwidth are required for their communication.
+
+    T2.1: Archangel Protocol and package structure
+The Archangel Protocol is a new protocol made for Pedestrian to Vehicle communication. 
+It makes sure that the packages that are more important (higher chance of accident) are sent as soon as possible.
+The package that is sent can be divided into four parts:
+	• The identifier code (UUID)
+	• Serial number (priority)
+	• Data type (code or compressed data)
+	• Actual data
+The actual data can be sent via codes or the raw data compressed (the algorithm will decide which method is optimal for the current situation). It contains the pedestrian's (in possible danger) position, direction, velocity, etc. This data is sent to the computational units.
+
+    T2.2: Communcation devices for the vehicles
+For the new methods for V2X communication to work it is mandatory to have devices on the vehicles to send and receive the data. These communication devices must have enough hardware to serve these tasks with huge amount of data while being efficient at power usage.
+
+    T2.3: 5G towers
+5G works differently than 4G, it is on a higher frequency to increase the amount of data sent. But it comes with a cost, the waves are lost for example if a thick wall is in the way. So it is necessary to have more 5G towers with overlapped areas so they are reachable from everywhere.
+
+    T2.4: Computational units
+The data that the cars and pedestrians are sending has to be calculated to be aware of potential dangers. Near the 5G towers computational units are required to handle these calculations. Then these units must inform the cars if there is a possibility of an accident nearby.
 
 -------------------------------
 
@@ -77,9 +107,41 @@ TUM - AI development for live safety
 UNTIN - package loss, system recovery, system hardness
 lead beneficiary: TUM
 
+
 WP6, level 5 autonomous cars
-ELTE - Verification
-AUDI - car prepare, sensors
-DT - lower level logical infrastructure
-gogo network - higher lever logical infrastructure
-lead beneficiary: - AUDI
+    
+    ELTE - Verification
+    AUDI - Sensors and preparations
+    DT - Lower level logical infrastructure
+    Gogo network - Higher lever logical infrastructure
+    Lead beneficiary: AUDI
+
+    Total pms:
+
+    Activity type:  
+    Start month:
+    End month:
+
+    Description of work:
+Level 5 refers to Full Driving Automation, the highest level of Vehicle Autonomy. 
+It means the vehicle is fully in control, a wheel is not needed anymore. 
+It can drive itself in all conditions without any human interaction.
+Human interaction is setting the destination only.
+
+    T6.1: Verification
+As pleasant as it sounds to have level 5 autonomous cars on the roads, these vehicles need to undergo various test phases to ensure the safety of others. 
+These test phases are for example scenarios in case of a system failure, after what the car must light up the warning lights and pull over safely.
+Another test phase should contain various objects on the road, some stationary, some moving and analyze what the car does in these cases.
+And there should be numerous other tests before releasing the cars on the roads.
+
+    T6.2: Sensors and preparations
+For achieving level 5 autonomy with these self-driving cars it is mandatory to have high level sensors to process the surroundings fast. These sensors must calculate the possible accidents with other cars, pedestrians, creatures, objects, potholes etc. and take countermeasures accordingly while driving fast for convenience (If these cars would travel at the speed of 20 km/h for safety, nobody would use them). 
+The cars also have to be equipped with self-watching sensors so in case of system failure it must stop the vehicle immediately but also cautiously.
+
+    T6.3: Lower level logical infrastructure
+The core of analyzing the sensors' data is in the methods of image- and pattern recognition. These methods calculate the possibility of an accident from the location, direction and velocity of the object (pedestrian, animal, vehicle, etc.) it encountered. These calculations must be fast because the safety of others is the number one priority on the roads (while also protecting the passengers of the vehicle itself).
+In case of an unexpected scenario, the car must take countermeasures (stop, bypass, etc.) and choose the best one of the possibilities.
+
+    T6.4: Higher lever logical infrastructure
+In the future when only self-driving cars will be on the roads, traffic lights could become unnecessary and slow. The cars could communicate with each other to slow down a bit to let a few cars pass by. This would decrease the time required to get from point A to point B. Also in case of road works these cars could easily resolve the problem without any traffic jam with changing lanes in time. This would increase the time but only a bit, and it's still a lot better than what a traffic jam would cause.
+When an ambulance or police car is near (while their lights and sirens are on) the cars would make place for them in time, that could help them reach their destination much faster, resolving the problem earlier.
